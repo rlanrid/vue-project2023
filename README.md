@@ -14,13 +14,13 @@ Vue는 자바스크립트 프레임워크로서, 사용자 인터페이스를 �
 6. 라우팅: Vue 라우터를 사용하여 싱글 페이지 애플리케이션 (SPA)을 구현할 수 있습니다.
 
 ## 셋팅
-`npm init vue@latest`
-√ Project name: ... vue-project2023
-√ Add TypeScript? ... <span style="color: blue">No</span> / Yes
-√ Add JSX Support? ... No / <span style="color: blue">Yes</span>
-√ Add Vue Router for Single Page Application development? ... No / <span style="color: blue">Yes</span>        
-√ Add Pinia for state management? ... <span style="color: blue">No</span> / Yes
-√ Add Vitest for Unit Testing? ... <span style="color: blue">No</span> / Yes
-√ Add an End-to-End Testing Solution? » <span style="color: blue">No</span>
-√ Add ESLint for code quality? ... No / <span style="color: blue">Yes</span>
-√ Add Prettier for code formatting? ... No / <span style="color: blue">Yes</span>
+`npm init vue@latest`   
+√ Project name: ... vue-project2023   
+√ Add TypeScript? ... <span style="color: blue">No</span> / Yes   
+√ Add JSX Support? ... No / <span style="color: blue">Yes</span>   
+√ Add Vue Router for Single Page Application development? ... No / <span style="color: blue">Yes</span>           
+√ Add Pinia for state management? ... <span style="color: blue">No</span> / Yes   
+√ Add Vitest for Unit Testing? ... <span style="color: blue">No</span> / Yes   
+√ Add an End-to-End Testing Solution? » <span style="color: blue">No</span>   
+√ Add ESLint for code quality? ... No / <span style="color: blue">Yes</span>   
+√ Add Prettier for code formatting? ... No / <span style="color: blue">Yes</span>   
