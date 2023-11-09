@@ -1,3 +1,7 @@
+<script setup>
+import { portText } from "@/constants/index"
+</script>
+
 <template>
     <section id="port">
         <div class="port__inner">
@@ -5,153 +9,55 @@
                 portfolio <em>포폴 작업물</em>
             </div>
             <div class="port__wrap">
-                <div class="port__item p1">
-                    <span class="num">01.</span>
+                <div v-for="(port, key) in portText" :key="key" :class="['port__item', 'p' + (key + 1)]">
+                    <span class="num">{{ port.num }}</span>
                     <a href="#">
-                        <img src="../assets/img/bgimg1.jpg" alt="이미지1">
+                        <img :src="port.img" alt="이미지1">
                     </a>
-                    <h3 class="title">리액트를 이용한 포트폴리오</h3>
+                    <h3 class="title">{{ port.title }}</h3>
                     <p class="desc">
-                        이 사이트는 정말 인상적인 포트폴리오입니다.
-                        특히 스무스한 효과와 가로 모드는 높은 퀄리티를 자랑합니다.
-                        디테일과 꼼꼼함이 넘치는 포트폴리오는 개발자의 뛰어난 능력을 엿볼 수 있습니다.
-                        GSAP와 React.js를 이용하여 사이트를 표현한 것은 기술적인 능력과 창의성을 강조하고
-                        세심한 코딩과 디테일한 작업으로 그의 개발 감각과 능력이 빛을 발휘한 것 같습니다.
+                        {{ port.desc }}
                     </p>
                     <div class="btn">
-                        <a href="#">사이트 보기</a>
+                        <a :href="port.code">사이트 보기</a>
                     </div>
-                </div>
-                <div class="port__item p2">
-                    <span class="num">02.</span>
-                    <a href="#">
-                        <img src="../assets/img/bgimg2.jpg" alt="이미지2">
-                    </a>
-                    <h3 class="title">리액트를 이용한 포트폴리오</h3>
-                    <p class="desc">
-                        이 사이트는 정말 인상적인 포트폴리오입니다.
-                        특히 스무스한 효과와 가로 모드는 높은 퀄리티를 자랑합니다.
-                        디테일과 꼼꼼함이 넘치는 포트폴리오는 개발자의 뛰어난 능력을 엿볼 수 있습니다.
-                        GSAP와 React.js를 이용하여 사이트를 표현한 것은 기술적인 능력과 창의성을 강조하고
-                        세심한 코딩과 디테일한 작업으로 그의 개발 감각과 능력이 빛을 발휘한 것 같습니다.
-                    </p>
-                </div>
-                <div class="port__item p3">
-                    <span class="num">03.</span>
-                    <a href="#">
-                        <img src="../assets/img/bgimg3.jpg" alt="이미지3">
-                    </a>
-                    <h3 class="title">리액트를 이용한 포트폴리오</h3>
-                    <p class="desc">
-                        이 사이트는 정말 인상적인 포트폴리오입니다.
-                        특히 스무스한 효과와 가로 모드는 높은 퀄리티를 자랑합니다.
-                        디테일과 꼼꼼함이 넘치는 포트폴리오는 개발자의 뛰어난 능력을 엿볼 수 있습니다.
-                        GSAP와 React.js를 이용하여 사이트를 표현한 것은 기술적인 능력과 창의성을 강조하고
-                        세심한 코딩과 디테일한 작업으로 그의 개발 감각과 능력이 빛을 발휘한 것 같습니다.
-                    </p>
-                </div>
-                <div class="port__item p4">
-                    <span class="num">04.</span>
-                    <a href="#">
-                        <img src="../assets/img/bgimg4.jpg" alt="이미지4">
-                    </a>
-                    <h3 class="title">리액트를 이용한 포트폴리오</h3>
-                    <p class="desc">
-                        이 사이트는 정말 인상적인 포트폴리오입니다.
-                        특히 스무스한 효과와 가로 모드는 높은 퀄리티를 자랑합니다.
-                        디테일과 꼼꼼함이 넘치는 포트폴리오는 개발자의 뛰어난 능력을 엿볼 수 있습니다.
-                        GSAP와 React.js를 이용하여 사이트를 표현한 것은 기술적인 능력과 창의성을 강조하고
-                        세심한 코딩과 디테일한 작업으로 그의 개발 감각과 능력이 빛을 발휘한 것 같습니다.
-                    </p>
-                </div>
-                <div class="port__item p5">
-                    <span class="num">05.</span>
-                    <a href="#">
-                        <img src="../assets/img/bgimg5.jpg" alt="이미지5">
-                    </a>
-                    <h3 class="title">리액트를 이용한 포트폴리오</h3>
-                    <p class="desc">
-                        이 사이트는 정말 인상적인 포트폴리오입니다.
-                        특히 스무스한 효과와 가로 모드는 높은 퀄리티를 자랑합니다.
-                        디테일과 꼼꼼함이 넘치는 포트폴리오는 개발자의 뛰어난 능력을 엿볼 수 있습니다.
-                        GSAP와 React.js를 이용하여 사이트를 표현한 것은 기술적인 능력과 창의성을 강조하고
-                        세심한 코딩과 디테일한 작업으로 그의 개발 감각과 능력이 빛을 발휘한 것 같습니다.
-                    </p>
-                </div>
-                <div class="port__item p6">
-                    <span class="num">06.</span>
-                    <a href="#">
-                        <img src="../assets/img/bgimg6.jpg" alt="이미지6">
-                    </a>
-                    <h3 class="title">리액트를 이용한 포트폴리오</h3>
-                    <p class="desc">
-                        이 사이트는 정말 인상적인 포트폴리오입니다.
-                        특히 스무스한 효과와 가로 모드는 높은 퀄리티를 자랑합니다.
-                        디테일과 꼼꼼함이 넘치는 포트폴리오는 개발자의 뛰어난 능력을 엿볼 수 있습니다.
-                        GSAP와 React.js를 이용하여 사이트를 표현한 것은 기술적인 능력과 창의성을 강조하고
-                        세심한 코딩과 디테일한 작업으로 그의 개발 감각과 능력이 빛을 발휘한 것 같습니다.
-                    </p>
-                </div>
-                <div class="port__item p7">
-                    <span class="num">07.</span>
-                    <a href="#">
-                        <img src="../assets/img/bgimg7.jpg" alt="이미지7">
-                    </a>
-                    <h3 class="title">리액트를 이용한 포트폴리오</h3>
-                    <p class="desc">
-                        이 사이트는 정말 인상적인 포트폴리오입니다.
-                        특히 스무스한 효과와 가로 모드는 높은 퀄리티를 자랑합니다.
-                        디테일과 꼼꼼함이 넘치는 포트폴리오는 개발자의 뛰어난 능력을 엿볼 수 있습니다.
-                        GSAP와 React.js를 이용하여 사이트를 표현한 것은 기술적인 능력과 창의성을 강조하고
-                        세심한 코딩과 디테일한 작업으로 그의 개발 감각과 능력이 빛을 발휘한 것 같습니다.
-                    </p>
-                </div>
-                <div class="port__item p8">
-                    <span class="num">08.</span>
-                    <a href="#">
-                        <img src="../assets/img/bgimg8.jpg" alt="이미지8">
-                    </a>
-                    <h3 class="title">리액트를 이용한 포트폴리오</h3>
-                    <p class="desc">
-                        이 사이트는 정말 인상적인 포트폴리오입니다.
-                        특히 스무스한 효과와 가로 모드는 높은 퀄리티를 자랑합니다.
-                        디테일과 꼼꼼함이 넘치는 포트폴리오는 개발자의 뛰어난 능력을 엿볼 수 있습니다.
-                        GSAP와 React.js를 이용하여 사이트를 표현한 것은 기술적인 능력과 창의성을 강조하고
-                        세심한 코딩과 디테일한 작업으로 그의 개발 감각과 능력이 빛을 발휘한 것 같습니다.
-                    </p>
-                </div>
-                <div class="port__item p9">
-                    <span class="num">09.</span>
-                    <a href="#">
-                        <img src="../assets/img/bgimg9.jpg" alt="이미지9">
-                    </a>
-                    <h3 class="title">리액트를 이용한 포트폴리오</h3>
-                    <p class="desc">
-                        이 사이트는 정말 인상적인 포트폴리오입니다.
-                        특히 스무스한 효과와 가로 모드는 높은 퀄리티를 자랑합니다.
-                        디테일과 꼼꼼함이 넘치는 포트폴리오는 개발자의 뛰어난 능력을 엿볼 수 있습니다.
-                        GSAP와 React.js를 이용하여 사이트를 표현한 것은 기술적인 능력과 창의성을 강조하고
-                        세심한 코딩과 디테일한 작업으로 그의 개발 감각과 능력이 빛을 발휘한 것 같습니다.
-                    </p>
-                </div>
-                <div class="port__item p10">
-                    <span class="num">10.</span>
-                    <a href="#">
-                        <img src="../assets/img/bgimg10.jpg" alt="이미지10">
-                    </a>
-                    <h3 class="title">리액트를 이용한 포트폴리오</h3>
-                    <p class="desc">
-                        이 사이트는 정말 인상적인 포트폴리오입니다.
-                        특히 스무스한 효과와 가로 모드는 높은 퀄리티를 자랑합니다.
-                        디테일과 꼼꼼함이 넘치는 포트폴리오는 개발자의 뛰어난 능력을 엿볼 수 있습니다.
-                        GSAP와 React.js를 이용하여 사이트를 표현한 것은 기술적인 능력과 창의성을 강조하고
-                        세심한 코딩과 디테일한 작업으로 그의 개발 감각과 능력이 빛을 발휘한 것 같습니다.
-                    </p>
                 </div>
             </div>
         </div>
     </section>
 </template>
+
+<script>
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
+export default {
+    mounted: function () {
+        this.scrollAnimation();
+    },
+    methods: {
+        scrollAnimation() {
+            const horSection = gsap.utils.toArray(".port__item");
+
+            gsap.to(horSection, {
+                xPercent: -120 * (horSection.length - 1),
+                ease: "none",
+                scrollTrigger: {
+                    trigger: "#port",
+                    start: "top top",
+                    end: "+=3000",
+                    pin: true,
+                    scrub: 1,
+                    markers: true,
+                    invalidateOnRefresh: true,
+                    anticipatePin: 1,
+                }
+            });
+        }
+    }
+}
+</script>
 
 <style lang="scss">
 #port {

@@ -1,36 +1,52 @@
+<script setup>
+import { headerNav } from "@/constants/index";
+</script>
+
 <template>
-    <header id="header" role="banner">
+    <header id="header" role="heading">
         <div class="header__inner">
-            <div class="header__logo">
-                <a href="#">portfolio <em>vite</em></a>
-            </div>
-            <nav class="header__nav" role="navigation" aria-label="메인 메뉴">
+            <h1 class="header__logo">
+                <a href="#">portfolio<em>vue.js</em></a>
+            </h1>
+            <nav class="header__nav" role="navigation" aria-label="메인 메뉴" :class="{ show: isNavVisible }">
                 <ul>
-                    <li>
-                        <a href="#intro">intro</a>
-                    </li>
-                    <li>
-                        <a href="#skill">skill</a>
-                    </li>
-                    <li>
-                        <a href="#site">site</a>
-                    </li>
-                    <li>
-                        <a href="#port">portfolio</a>
-                    </li>
-                    <li>
-                        <a href="#contact">contact</a>
+                    <li v-for="(nav, key) in headerNav" :key="key">
+                        <a :href="nav.url" @click="scrollLink($event)">{{ nav.title }}</a>
                     </li>
                 </ul>
             </nav>
-            <div class="header__nav__mobile" id="headerToggle" aria-controls="primary-menu" aria-expanded="false"
-                role="button">
+            <div class="header__nav__mobile" id="headerToggle" aria-controls="primary-menu"
+                :aria-expanded="isNavVisible.toString()" @click="toggleMobileMenu">
                 <span></span>
             </div>
         </div>
     </header>
-    <!-- //header -->
 </template>
+
+<script>
+export default {
+    data() {
+        return {
+            isNavVisible: false,
+        };
+    },
+    methods: {
+        toggleMobileMenu() {
+            this.isNavVisible = !this.isNavVisible;
+        },
+        scrollLink(event) {
+            event.preventDefault();
+
+            const targetId = event.target.getAttribute("href");
+            const targetElement = document.querySelector(targetId);
+
+            if (targetElement) {
+                targetElement.scrollIntoView({ behavior: "smooth" });
+            }
+        },
+    },
+};
+</script>
 
 <style lang="scss">
 #header {
