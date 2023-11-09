@@ -16,7 +16,7 @@ Vue는 자바스크립트 프레임워크로서, 사용자 인터페이스를 �
 ## 셋팅
 `npm init vue@latest`<br>   
 √ Project name: ... vue-project2023   
-√ Add TypeScript? ... <span style="color: blue">some <em>No</em> text</span> / Yes   
+√ Add TypeScript? ... <font color="red">No</font> / Yes   
 √ Add JSX Support? ... No / <span style="color: blue">Yes</span>   
 √ Add Vue Router for Single Page Application development? ... No / <span style="color: blue">Yes</span>           
 √ Add Pinia for state management? ... <span style="color: blue">No</span> / Yes   
